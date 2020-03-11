@@ -10,6 +10,7 @@ namespace AUSMDM.Controllers
     {
         public IActionResult Index()
         {
+            //This is a comment
             return View();
         }
     }
