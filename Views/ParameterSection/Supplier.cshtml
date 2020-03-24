@@ -1,0 +1,56 @@
+﻿@model IEnumerable<AUSMDM.Models.Users>
+
+
+
+<h1><center><b>Supplier</b></center></h1>
+
+<p>
+    <a asp-action="Create"><input type="button" value="Create" class="btn btn-primary" /></a>
+</p>
+
+<form asp-controller="ParameterController" asp-action="Search" method="get">
+    <!--https://forums.asp.net/t/2093808.aspx?+ASP+NET+5+MVC+6+How+to+make+a+search+box+and+receive+input+value+in+Search+Action+-->
+    <input name="Search" id="Search" />
+    <input type="submit" value="Search" />
+    <a asp-action="Search"></a>
+</form>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdentityNumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdentityNumber)
+                </td>
+                <td>
+                    <button> @Html.ActionLink("Edit", "Edit", new { i = item.IdentityNumber })</button>  
+                    <button>  @Html.ActionLink("Details", "Details", new { id = item.IdentityNumber })</button>  
+                    <button> @Html.ActionLink("Delete", "Delete", new { i = item.IdentityNumber })</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script src="~/js/ParameterJS.js"></script>

@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<link rel="stylesheet" href="~/css/ReportTopBar.css" />
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+
+
+<div class="navbar">
+
+    <button class="dropdown-btn">
+        Pre Pay Report
+        <i class="fa fa-file-text" aria-hidden="true"></i>
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+        <div><a href="@Url.Action("CollectionReport", "ReportSection")" class="elements">Non/Low Purchase <i class="fa fa-file-text" aria-hidden="true"></i> </a></div>
+        <div><a href="#">Sales Report <i class="fa fa-file-text" aria-hidden="true"></i> </a></div>
+        <div><a href="#">Purchase Report <i class="fa fa-file-text" aria-hidden="true"></i> </a></div>
+        <div><a href="#">Reversal Report <i class="fa fa-file-text" aria-hidden="true"></i> </a></div>
+        <div><a href="#">Tariff Report <i class="fa fa-file-text" aria-hidden="true"></i> </a></div>
+        <btn>New button</btn>
+        <!--My change - REMOVE THIS-->
+    </div>
+
+    
+</div>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+
+</html>

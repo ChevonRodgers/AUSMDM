@@ -8,9 +8,20 @@ namespace AUSMDM.Controllers
 {
     public class ReportSectionController : Controller
     {
-        public IActionResult Index()
+        public IActionResult CollectionReport()
         {
             return View();
+            
+        }
+        public IActionResult ArchiveReport()
+        {
+            return View();
+
+        }
+        public IActionResult PrePayReport()
+        {
+          return View();
+
         }
     }
 }

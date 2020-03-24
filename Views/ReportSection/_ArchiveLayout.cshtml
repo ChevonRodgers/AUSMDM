@@ -1,0 +1,36 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="~/css/ReportTopBar.css" />
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+
+
+<div class="navbar">
+
+    <button class="dropdown-btn">
+        Archive Report
+        <i class="fa fa-file-text" aria-hidden="true"></i>
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+        <div> <a href="">Meter Status <i class="fa fa-file-text" aria-hidden="true"></i> </a></div>
+        <div>  <a href="#">Maintenance Report <i class="fa fa-file-text" aria-hidden="true"></i> </a></div>
+        <div> <a href="#">Installation Report <i class="fa fa-file-text" aria-hidden="true"></i> </a></div>
+        <div><a href="#">Maintenance Report <i class="fa fa-file-text" aria-hidden="true"></i> </a></div>
+        <div><a href="#">Replacement Report <i class="fa fa-file-text" aria-hidden="true"></i> </a></div>
+    </div>
+    @Html.RenderPartialAsync("_View")
+</div>
+
+<body>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

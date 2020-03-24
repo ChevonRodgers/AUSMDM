@@ -1,0 +1,31 @@
+﻿@{
+Layout = "~/Views/Shared/_Layout.cshtml";
+}      
+<!DOCTYPE html>
+<link rel="stylesheet" href="~/css/ReportTopBar.css" />
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+
+
+<div class="navbar">
+
+    <button class="dropdown-btn">
+        Collection Report
+        <i class="fa fa-file-text" aria-hidden="true"></i>
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+        <div><a href="@Url.Action("CollectionReport", "ReportSection")" class="elements">Online Analysis <i class="fa fa-file-text" aria-hidden="true"></i> </a></div>
+        <div><a href="#">Monthly Consumption <i class="fa fa-file-text" aria-hidden="true"></i> </a></div>
+        <div><a href="#">Monthly Consumption Fail <i class="fa fa-file-text" aria-hidden="true"></i> </a></div>
+    </div>
+</div>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
