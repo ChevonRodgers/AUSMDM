@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Build.Tasks.Git" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="bootstrap" Version="4.4.1" />
     <PackageReference Include="Extended.Wpf.Toolkit" Version="3.8.1" />
     <PackageReference Include="Grid.Mvc" Version="3.0.0" />
@@ -19,6 +27,8 @@
   <ItemGroup>
     <Folder Include="Views\AnalysisSection\" />
     <Folder Include="Views\ArchiveSection\" />
+    <Folder Include="Views\ReportSection\" />
+    <Folder Include="Views\SystemSection\" />
     <Folder Include="Views\RemotingSection\" />
     <Folder Include="Views\SystemSection\" />
     <Folder Include="Views\ReportSection\" />
