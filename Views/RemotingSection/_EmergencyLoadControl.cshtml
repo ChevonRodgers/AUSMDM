@@ -1,0 +1,75 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Emergency Load Control";
+}
+    
+        <div class="text-center container">
+            <h4>Emergency Load Control</h4>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-sm-6">
+                        <label for="inputName1">name?</label>
+                        <select id="inputName1" class="form-control">
+                            <option selected>Others</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="inputName2">name?</label>
+                        <select id="inputName2" class="form-control">
+                            <option selected>All execute result</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Search..">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputTime">Start Time</label>
+                        <input type="text" class="form-control" id="inputTime">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputDuration">Duration(min):</label>
+                        <select id="inputDuration" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputCurrent">Current(A)</label>
+                        <input type="text" class="form-control" id="inputCurrent">
+                    </div>
+                </div>
+                @*  *@
+                <button type="submit" class="btn btn-secondary"><i class="fa fa-upload" aria-hidden="true"></i>Reading</button>
+                <button type="submit" class="btn btn-secondary"><i class="fa fa-upload" aria-hidden="true"></i>Execute</button>
+                <button type="submit" class="btn btn-secondary"><i class="fa fa-upload" aria-hidden="true"></i>Re-execute</button>
+
+                <div class="container">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th>MSNO</th>
+                                <th>POC SN</th>
+                                <th>Power Grid</th>
+                                <th>Customer</th>
+                                <th>Customer</th>
+                                <th>Address</th>
+                                <th>Customer</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+            </form>

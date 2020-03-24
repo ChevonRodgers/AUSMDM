@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    ViewData["Title"] = "Realtime Operating";
+}
+    <div class="text-center">
+        <h4>RealtimeOperating</h4>
+        <form>
+            <div class="form-row">
+                
+                <div>
+                    <input type="text" placeholder="Search..">
+                </div>
+            </div>
+            <div class="form-row">
+                
+                <div class="form-group col-md-2">
+                    <label for="inputCurrent">MSO</label>
+                    <input type="text" class="form-control" id="inputCurrent">
+                </div>
+            </div>
+            @*  *@
+            <button type="submit" class="btn btn-secondary"><i class="fa fa-upload" aria-hidden="true"></i>Reading</button>
+            <button type="submit" class="btn btn-secondary"><i class="fa fa-upload" aria-hidden="true"></i>Execute</button>
+            
+            <div class="container">
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th>MSNO</th>
+                            <th>POC SN</th>
+                            <th>Execute</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+        </form>
+    </div>

@@ -3,32 +3,132 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - AUSMDM</title>
+    <title>@ViewData["Title"] - AUS Meter Data Management</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/sideMenu.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
 </head>
 <body>
+    <!--Header-->
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AUSMDM</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AUS Meter Data Management</a>
             </div>
         </nav>
     </header>
+    <!--Side menu start-->
+    <div class="sidenav sidenav-expand-sm sidenav-toggleable-sm" >
+        <!--Report Tab-->
+        <button class="dropdown-btn">
+            Report
+            <i class="fa fa-file-text" aria-hidden="true"></i>
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Collection Report <i class="fa fa-file-text" aria-hidden="true"></i> </a>
+            <a href="#">Prepay Report <i class="fa fa-file-text" aria-hidden="true"></i> </a>
+            <a href="#">Archive Report <i class="fa fa-file-text" aria-hidden="true"></i> </a>
+        </div>
+        <!--Analysis Tab-->
+        <button class="dropdown-btn">
+            Analysis
+            <i class="fa fa-bar-chart" aria-hidden="true"></i>
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Event Analysis <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> </a>
+            <a href="#">Raw Data <i class="fa fa-microchip" aria-hidden="true"></i> </a>
+            <a href="#">Monthly Billing <i class="fa fa-book" aria-hidden="true"></i> </a>
+            <a href="#">Load Profile <i class="fa fa-bar-chart" aria-hidden="true"></i> </a>
+            <a href="#">Consumption <i class="fa fa-address-card-o" aria-hidden="true"></i> </a>
+            <a href="#">Max Demand <i class="fa fa-bar-chart" aria-hidden="true"></i> </a>
+            <a href="#">Online Rate <i class="fa fa-arrows-v" aria-hidden="true"></i> </a>
+            <a href="#">Summary <i class="fa fa-file-text" aria-hidden="true"></i> </a>
+            <a href="#">Task Analysis <i class="fa fa-bar-chart" aria-hidden="true"></i> </a>
+            <a href="#">Line Loss <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> </a>
+        </div>
+        <!--Remoting Tab-->
+        <button class="dropdown-btn">
+            Remoting
+            <i class="fa fa-arrows-h" aria-hidden="true"></i>
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a asp-area="" asp-controller="RemotingSection" asp-action="_RealtimeOperating">Realtime Operating <i class="fa fa-clock-o" aria-hidden="true"></i> </a>
+            <a asp-area="" asp-controller="RemotingSection" asp-action="_Reading">Reading <i class="fa fa-exchange" aria-hidden="true"></i> </a>
+            <a asp-area="" asp-controller="RemotingSection" asp-action="_EmergencyLoadControl">Emergency Load Control <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> </a>
+            <a asp-area="" asp-controller="RemotingSection" asp-action="_TariffUpdateResult">Tariff Update Result <i class="fa fa-upload" aria-hidden="true"></i> </a>
+        </div>
+        <!--Prepay Tab-->
+        <button class="dropdown-btn">
+            Prepay
+            <i class="fa fa-credit-card" aria-hidden="true"></i>
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Merchant <i class="fa fa-user" aria-hidden="true"></i> </a>
+            <a href="#">Debt <i class="fa fa-usd" aria-hidden="true"></i> </a>
+            <a href="#">Test Token <i class="fa fa-code-fork" aria-hidden="true"></i> </a>
+            <a href="#">Manage Token Log <i class="fa fa-file-text-o" aria-hidden="true"></i> </a>
+            <a href="#">Manage Token <i class="fa fa-stack-overflow" aria-hidden="true"></i> </a>
+            <a href="#">Transaction <i class="fa fa-exchange" aria-hidden="true"></i> </a>
+            <a href="#">Vending <i class="fa fa-desktop" aria-hidden="true"></i> </a>
+            <a href="#">My Sales <i class="fa fa-credit-card" aria-hidden="true"></i> </a>
+            <a href="#">Special Recharge <i class="fa fa-usd" aria-hidden="true"></i> </a>
+            <a href="#">Special Recharge Report <i class="fa fa-file-text" aria-hidden="true"></i> </a>
+        </div>
+        <!--Archive Tab-->
+        <button class="dropdown-btn">
+            Archive
+            <i class="fa fa-archive" aria-hidden="true"></i>
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Customer <i class="fa fa-user" aria-hidden="true"></i> </a>
+            <a href="#">Meter <i class="fa fa-building-o" aria-hidden="true"></i> </a>
+            <a href="#">POC <i class="fa fa-flag" aria-hidden="true"></i> </a>
+            <a href="#">Sim Card <i class="fa fa-signal" aria-hidden="true"></i> </a>
+            <a href="#">Power Grid <i class="fa fa-bolt" aria-hidden="true"></i> </a>
+            <a href="#">Installation Wizard <i class="fa fa-magic" aria-hidden="true"></i> </a>
+            <a href="#">Device Upgrade <i class="fa fa-level-up" aria-hidden="true"></i> </a>
+            <a href="#">Line Loss <i class="fa fa-exclamation" aria-hidden="true"></i> </a>
+        </div>
+        <!--Parameter Tab-->
+        <button class="dropdown-btn">
+            Parameter
+            <i class="fa fa-key" aria-hidden="true"></i>
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Supplier <i class="fa fa-users" aria-hidden="true"></i> </a>
+            <a href="#">Meter Type <i class="fa fa-tachometer" aria-hidden="true"></i> </a>
+            <a href="#">Fee <i class="fa fa-usd" aria-hidden="true"></i> </a>
+            <a href="#">Tariff <i class="fa fa-tag" aria-hidden="true"></i> </a>
+            <a href="#">Supply Group <i class="fa fa-users" aria-hidden="true"></i> </a>
+            <a href="#">Collect Plan <i class="fa fa-compress" aria-hidden="true"></i> </a>
+            <a href="#">Event <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
+        </div>
+        <!--System Tab-->
+        <button class="dropdown-btn">
+            System
+            <i class="fa fa-cogs" aria-hidden="true"></i>
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Role <i class="fa fa-user-md" aria-hidden="true"></i></a>
+            <a href="#">User <i class="fa fa-user" aria-hidden="true"></i> </a>
+            <a href="#">Notice Management <i class="fa fa-bullhorn" aria-hidden="true"></i></a>
+            <a href="#">Operating Log <i class="fa fa-file-text" aria-hidden="true"></i></a>
+            <a href="#">Login Log <i class="fa fa-file-text" aria-hidden="true"></i></a>
+            <a href="#">My Notice <i class="fa fa-bullhorn" aria-hidden="true"></i></a>
+            <a href="#">Subscribe <i class="fa fa-rss" aria-hidden="true"></i></a>
+        </div>
+
+    </div>
+    <!--Side menu end-->
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -44,5 +144,8 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
