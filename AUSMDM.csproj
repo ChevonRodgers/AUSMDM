@@ -19,6 +19,8 @@
   <ItemGroup>
     <Folder Include="Views\AnalysisSection\" />
     <Folder Include="Views\ArchiveSection\" />
+    <Folder Include="Views\ReportSection\" />
+    <Folder Include="Views\SystemSection\" />
     <Folder Include="Views\RemotingSection\" />
     <Folder Include="Views\SystemSection\" />
     <Folder Include="Views\ReportSection\" />
