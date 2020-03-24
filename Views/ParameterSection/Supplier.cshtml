@@ -1,0 +1,65 @@
+﻿@model IEnumerable<AUSMDM.Models.Users>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+
+
+<h1><center><b>Supplier</b></center></h1>
+
+<p>
+    <a asp-action="CreateSupplier"><input type="button" value="Create New" class="btn btn-primary" /></a>
+</p>
+
+<form asp-controller="ParameterController" asp-action="Search" method="get">
+    <!--https://forums.asp.net/t/2093808.aspx?+ASP+NET+5+MVC+6+How+to+make+a+search+box+and+receive+input+value+in+Search+Action+-->
+    <input name="Search" id="Search" placeholder="Name/Tel" />
+    <input type="submit" value="Search" />
+    <a asp-action="Search"></a>
+</form>
+<br />
+<p><input type="checkbox" name="Action" checked="checked" />Enable Actions?</p>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="Name">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th class="Surname">
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th class="IdentityNumber">
+                @Html.DisplayNameFor(model => model.IdentityNumber)
+            </th>
+            <th class="Action">
+                Action
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td class="Name">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td class="Surname">
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                <td class="IdentityNumber">
+                    @Html.DisplayFor(modelItem => item.IdentityNumber)
+                </td>
+                <td class="Action">
+                    <button> @Html.ActionLink("Edit", "EditSupplier", new { i = item.IdentityNumber })</button>
+                    <button>  @Html.ActionLink("Details", "DetailsSupplier", new { i = item.IdentityNumber })</button>
+                    <button> @Html.ActionLink("Delete", "DeleteSupplier", new { i = item.IdentityNumber })</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script src="~/js/ParameterJS.js"></script>
